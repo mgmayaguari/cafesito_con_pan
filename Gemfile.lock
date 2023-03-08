@@ -87,6 +87,8 @@ GEM
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    erb-formatter (0.4.2)
+      syntax_tree (~> 5.0)
     erubi (1.12.0)
     ffi (1.15.5)
     globalid (1.1.0)
@@ -128,6 +130,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-arm64-darwin)
       racc (~> 1.4)
+    prettier_print (1.2.0)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -191,6 +194,8 @@ GEM
     sqlite3 (1.6.1-arm64-darwin)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    syntax_tree (5.3.0)
+      prettier_print (>= 1.2.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -224,6 +229,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  erb-formatter
   importmap-rails
   jbuilder
   puma (~> 5.0)

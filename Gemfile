@@ -48,6 +48,9 @@ gem "sassc-rails"
 # Use Semantic UI Library
 gem "semantic-ui-sass"
 
+# Use erb formatter
+gem 'erb-formatter'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
