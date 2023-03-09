@@ -3,15 +3,23 @@
   Messages
 </a>
 <div class="right menu">
-  <div class="ui dropdown item">
-    Account
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <%= link_to "Log in", login_path, class: "item" %>
-      <a class="item">Log out</a>
-      <%= link_to "Sign up", login_path, class: "item" %>
+  <% if logged_in? %>
+    <div class="ui dropdown item">
+      Account
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <%= link_to "Log out",
+        logout_path,
+        class: "item",
+        data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"
+        } %>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <%= link_to "Log in", login_path, class: "ui item" %>
+  <% end %>
   <div class="item">
     <div class="ui primary button">Sign Up</div>
   </div>
