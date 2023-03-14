@@ -9,3 +9,10 @@ $(document).on('turbo:load', function () {
   $('.ui.dropdown')
     .dropdown();
 })
+
+// add auto scroll to bottom in messages
+$(document).on('turbo:load', function() {
+  if ($('#messages').length > 0) {
+  $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
+})
