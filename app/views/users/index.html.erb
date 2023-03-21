@@ -1,0 +1,32 @@
+<h4 class="ui center aligned medium icon header">
+  <i class="circular brown users icon"></i>
+  Let's connect
+</h4>
+
+<div class="ui two column grid">
+  <div class="twelve wide column centered">
+    <div class="ui fluid raised card chatbox">
+      <div class="center aligned row">
+        <div class="ui segment">
+          <div class="ui horizontal list">
+            <% @users.each do |user| %>
+              <div class="item">
+                <i class="circular user icon"></i>
+                <div class="content">
+                  <div class="header"><%= user.username %></div>
+                  <small>Joined
+                    <%= time_ago_in_words(user.created_at) %>
+                    ago</small>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="four wide column">
+    <%= render "chatroom/side_nav" %>
+  </div>
+</div>
